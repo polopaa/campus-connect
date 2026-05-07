@@ -1,0 +1,23 @@
+{
+  "overview": "A college student discovery app where students can create profiles with their home state and city, then discover and connect with peers from the same background. Features dynamic filtering, state-based recommendations, and a modern card-based UI.",
+  "features": [
+    "Internet Identity authentication with session persistence",
+    "Profile creation with nickname, state, city, branch, year, interests, and contact",
+    "Discover page with dynamic filters by state, city, branch, and year",
+    "People from Your State — auto-detected section at the top",
+    "Recently joined users section",
+    "Loading skeletons and clean empty states",
+    "Mobile-responsive card layout with Connect button",
+    "Simple navbar with Home, Discover, and Profile links"
+  ],
+  "category": "social",
+  "tags": [
+    "college",
+    "students",
+    "networking",
+    "discover",
+    "community",
+    "profiles"
+  ],
+  "last_updated": "2026-05-04T19:46:47.759Z"
+}

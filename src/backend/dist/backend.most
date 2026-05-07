@@ -1,0 +1,25 @@
+// Version: 1.0.0
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Timestamp__778030842 = Int;
+type UserId__1043627770 = Text;
+type UserProfile__277265826 =
+  {
+    branch : Text;
+    city : Text;
+    contact : ?Text;
+    createdAt : Timestamp__778030842;
+    id : UserId__1043627770;
+    interests : ?Text;
+    nickname : Text;
+    state : Text;
+    year : Nat
+  };
+actor {
+  stable profiles :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?UserProfile__277265826]];
+      var elementIndex : Nat__490723111
+    }
+};

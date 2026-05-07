@@ -1,0 +1,30 @@
+type UserProfile = 
+ record {
+   branch: text;
+   city: text;
+   contact: opt text;
+   createdAt: Timestamp;
+   id: UserId;
+   interests: opt text;
+   nickname: text;
+   state: text;
+   year: nat;
+ };
+type UserId = text;
+type Timestamp = int;
+type ProfileResult = 
+ variant {
+   err: text;
+   ok: UserProfile;
+ };
+service : {
+  createOrUpdateProfile: (nickname: text, state: text, city: text, branch:
+   text, year: nat, interests: opt text, contact: opt text) ->
+   (ProfileResult);
+  getAllUsers: () -> (vec UserProfile) query;
+  getMyProfile: () -> (opt UserProfile) query;
+  getRecentlyJoined: (limit: nat) -> (vec UserProfile) query;
+  getUsersByFilters: (state: opt text, city: opt text, branch: opt text,
+   year: opt nat) -> (vec UserProfile) query;
+  getUsersByState: (state: text) -> (vec UserProfile) query;
+}
