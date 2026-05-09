@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/Navbar";
 import type { ReactNode } from "react";
-import { Analytics } from "@vercel/analytics/next";
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,7 +12,15 @@ export function Layout({ children }: LayoutProps) {
       <main className="flex-1 pb-16 sm:pb-0">{children}</main>
       <footer className="hidden sm:block bg-card border-t border-border/40 py-5 mt-auto">
         <div className="max-w-6xl mx-auto px-4 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()}. This is an student made website
+          © {new Date().getFullYear()}. Built with love using{" "}
+          <a
+            href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            caffeine.ai
+          </a>
         </div>
       </footer>
     </div>
