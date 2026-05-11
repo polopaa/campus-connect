@@ -17,5 +17,6 @@ export function Layout({ children }: LayoutProps) {
         </div>
       </footer>
     </div>
+    <Analytics />
   );
 }
